@@ -104,7 +104,7 @@ python3 model_eval.py --ckpt /path/model/checkpoint.ckpt
 - `save_npy`: enable saving npy file with probabilities
 - `save_mask`: save binary mask for evaluation
 
-*Warning* : The evaluation with this script is performed on frames of the size defined for the training of the model ( default : 128x224 ). Thus to perform valid evaluation on benchmark you need to resize the prediction to the size of the original Ground Truth mask. If you want to perform proper evaluation from your `.npy` files you can use the code in `evaluationmodule`.
+*Warning* : The evaluation with this script is performed on frames of the size defined for the training of the model ( default : 128x224 ). Thus to perform valid evaluation on benchmark you need to resize the prediction to the size of the original Ground Truth mask. If you want to perform proper evaluation from your `.npy` files you can use the code in [evaluationmodule](evaluationmodule).
 
 ## Use our Loss in your project :star:
 
