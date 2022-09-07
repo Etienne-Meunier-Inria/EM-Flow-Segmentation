@@ -1,6 +1,6 @@
 # EM-driven unsupervised learning for efficient motion segmentation
 
-[[PAMI]()] : E. Meunier, A. Badoual and P. Bouthemy, "EM-Driven Unsupervised Learning for Efficient Motion Segmentation," in *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 2022, doi: 10.1109/TPAMI.2022.3198480.
+[[PAMI](https://ieeexplore.ieee.org/document/9855882)] : E. Meunier, A. Badoual and P. Bouthemy, "EM-Driven Unsupervised Learning for Efficient Motion Segmentation," in *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 2022, doi: 10.1109/TPAMI.2022.3198480.
 
 [[Arxiv](https://arxiv.org/pdf/2201.02074.pdf)] : Etienne Meunier, Anaïs Badoual, and Patrick Bouthemy. "EM-driven unsupervised learning for efficient motion segmentation." *arXiv preprint arXiv:2201.02074* (2022). 
 
