@@ -34,7 +34,7 @@ dm = CsvDataModule(request=model.request, **vars(args))
 #########################
 if args.path_save_model :
     path = Path(args.path_save_model)
-    path.mkdir(exist_ok=True))
+    path.mkdir(exist_ok=True)
     # We save the model with the lowest validation loss.
     args.callbacks = [pl.callbacks.ModelCheckpoint(args.path_save_model,
                                                    monitor='epoch_val_loss',
@@ -55,5 +55,5 @@ logger.log_hyperparams(args)
 #########################
 ##      Run Training   ##
 #########################
-trainer = pl.Trainer.from_argparse_args(args, logger=logger
+trainer = pl.Trainer.from_argparse_args(args, logger=logger)
 trainer.fit(model, dm)

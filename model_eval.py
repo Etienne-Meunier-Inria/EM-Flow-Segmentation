@@ -15,6 +15,8 @@ parser.add_argument('--draw_figs', action='store_true', help="Generate figure (.
 parser.add_argument('--save_npy', action='store_true', help="Generate probability prediction (.npy)")
 parser.add_argument('--save_mask', action='store_true', help="Generate binary mask (.png)")
 parser.add_argument('--steps', nargs='+', type=str, default=['test', 'val'])
+parser.add_argument('--binary_method_gen', help='Method to use to produce binary masks', type=str,
+                    choices=['fair', 'exceptbiggest'], default=None)
 parser = CsvDataModule.add_specific_args(parser)
 args = parser.parse_args()
 
@@ -26,6 +28,8 @@ Path(args.save_dir).mkdir(exist_ok=True)
 model = MethodeB.load_from_checkpoint(args.ckpt, strict=False)
 args.img_size = model.hparams.img_size
 args.flow_normalisation = model.hparams.flow_normalisation
+if args.binary_method_gen is not None :
+    model.binary_method = args.binary_method_gen
 
 
 #########################

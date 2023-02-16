@@ -196,7 +196,7 @@ class CoherenceNet(LitSegmentationModel) :
             binmax.scatter_(1, argmax, 1)
             spgtmask = batch['GtMask'][:,None].repeat_interleave(L, dim=1)
             si = ((binmax *spgtmask).sum(axis=(2,3)) / binmax.sum(axis=(2,3))) > 0.5
-            batch['PredMask'] = (binmax * si[:,:,None,None]).sum(axis=1)
+            batch['PredMask'] = (binmax * si[:,:,None,None]).sum(axis=1).to(bool)
 
 
     def custom_figs(self, ax, batch, evals) :
